@@ -227,6 +227,7 @@ nav ul li:hover{
 
 .wn .img{
     position: relative;
+    overflow-x: hidden;
 }
 
 .wn .img::before{
