@@ -205,6 +205,7 @@ nav ul li:hover{
     gap: 20px;
     width: 100%;
     padding: 5% 0;
+    overflow-x: hidden;
 }
 
 .wn .text{
@@ -227,7 +228,6 @@ nav ul li:hover{
 
 .wn .img{
     position: relative;
-    overflow-x: hidden;
 }
 
 .wn .img::before{
