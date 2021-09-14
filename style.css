@@ -1,0 +1,700 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primaryfont: "Segoe UI";
+    --secondaryfont: "cambria";
+    --primarycolor: #2C81CD;
+    --gopacity: 85%;
+}
+
+body{
+    max-width: 1500px;
+    overflow-x: hidden;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    margin-bottom: 50px;
+    min-height: 50vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 33;
+    padding: 10px 5%;
+
+}
+
+#logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: .5s ease-in-out;
+}
+
+nav ul li a{
+    font-family: var(--primaryfont), Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 14px;
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid white;
+}
+
+#hero{
+    min-height: 100vh;
+    width: 100%;
+    background: url("./images/plumbingphoto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-content: center;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    gap: 20px;
+    padding: 5%;
+}
+
+#hero::before{
+    content: "";
+    background: var(--primarycolor);
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    opacity: var(--gopacity);
+}
+
+#hero > div{
+    position: relative;
+    z-index: 22;
+    flex: 1 1 300px;
+}
+
+#hero .headlines{
+    padding: 0 50px;
+    flex: 2;
+}
+
+#hero .headlines h1{
+    color: white;
+    font-family: var(--secondaryfont);
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+#hero .headlines p{
+    color: white;
+    opacity: var(--gopacity);
+    font-family: var(--primaryfont);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+#hero .headlines .cta{
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: var(--primaryfont);
+    cursor: pointer;
+}
+
+#hero .headlines .cta.f{
+    background: white;
+    color: var(--primarycolor);
+    margin-right: 10px;
+}
+
+#hero .headlines .cta.s{
+    border-bottom: 2px solid white;
+    color: white;
+    padding: 8px 15px;
+}
+
+#hero .form{
+    min-width: fit-content;
+    max-width: 90%;
+    padding: 0 50px;
+    color: var(--primarycolor);
+    font-family: var(--primaryfont);
+    margin-bottom: -200px;
+}
+
+#hero .form form, #ref{
+    max-width: 100%;
+    width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 5%;
+}
+
+#hero .form form h3, #ref h3{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#hero .form form label, #ref label{
+    font-weight: bold;
+}
+
+#hero .form form input, #hero .form form select, #ref input, #ref select{
+    display: inline-block;
+    border: 2px solid var(--primarycolor);
+    border-radius: 10px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    outline: none;
+}
+
+#hero .form form button, #ref button{
+    display: block;
+    margin: auto;
+    background: var(--primarycolor);
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+}
+
+#hero .form form button:hover{
+    box-shadow: inset 3px 3px 4px rgba(0, 0, 0, .3);
+}
+
+.wn{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    place-content: center;
+    place-items: stretch;
+    gap: 20px;
+    width: 100%;
+    padding: 5% 0;
+    overflow-x: hidden;
+}
+
+.wn .text{
+    padding: 20px;
+}
+
+.wn .text h2, #services h2, .process h2, .dwhy h2, .adservices h2, .wts h2, #faqs h2, .founder h2{
+    font-family: var(--secondaryfont);
+    color: var(--primarycolor);
+    margin-bottom: 20px;
+    opacity: var(--gopacity);
+    font-size: 20px;
+}
+
+.wn .text p{
+    font-family: var(--primaryfont);
+    margin-bottom: 30px;
+    margin-left: 5px;
+}
+
+.wn .img{
+    position: relative;
+}
+
+.wn .img::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background: var(--primarycolor);
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.wn .wn-img{
+    width: 500px;
+    max-width: 100%;
+    height: 300px;
+    max-height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#services, .process{
+    padding: 5%;
+}
+
+#services h2, .process h2, .dwhy h2, .adservices h2, .wts h2, #faqs h2, .founder h2{
+    font-family: var(--primaryfont);
+    font-weight: 500;
+}
+
+#services .s, .process .p{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+    place-content: center center;
+    place-items: center center;
+    gap: 20px;
+}
+
+#services .s>div{
+    height: 250px;
+    width: 280px;
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+#services .s >div:nth-child(1){
+    background: url("./images/imgbox-inner__img01-md.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#services .s >div:nth-child(2){
+    background: url("./images/imgbox-inner__img02.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#services .s >div:nth-child(3){
+    background: url("./images/imgbox-inner__img03.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#services .s p{
+    position: absolute;
+    bottom: 0;
+    background: var(--primarycolor);
+    padding: 10px;
+    color: white;
+    font-family: var(--primaryfont);
+    border-top-right-radius: 10px;
+}
+
+.process .p img{
+    max-width: 100%;
+}
+
+.process .p p{
+    color: var(--primarycolor);
+    font-family: var(--primaryfont);
+    text-align: center;
+    font-weight: 500;
+}
+
+.dwhy, .whys{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    place-content: center;
+    place-items: center center;
+    gap: 20px;
+    padding: 5%;
+    width: 100%;
+}
+
+.dwhy img{
+    max-width: 100%;
+}
+
+.dwhy .text{
+    place-self: start;
+}
+
+.whys{
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+}
+
+.whys h3, .adservices .ads h3{
+    font-family: var(--primaryfont);
+    font-size: 18px;
+    color: var(--primarycolor);
+    margin-bottom: 5px;
+    /* font-weight: 500; */
+}
+
+.whys p, .adservices .ads p, .grid_wts .text p{
+    font-family: var(--primaryfont)
+}
+
+.adservices{
+    padding: 5%;
+}
+
+.grid_ads{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-content: center;
+    place-items: center center;
+    gap: 20px;
+    width: 100%;
+}
+
+.adservices .img{
+    position: relative;
+    width: 70%;
+}
+
+.adservices .img::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -50px;
+    width: 100%;
+    height: 70%;
+    background: var(--primarycolor);
+    border-radius: 30px;
+    z-index: -1;
+    transform: skewX(-30deg);
+}
+
+.adservices .img img{
+    height: 400px;
+}
+
+.adservices .ads{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
+    place-content: start;
+    place-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+.adservices .ads img{
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.adservices .ads h3{
+    font-size: 16px;
+}
+
+.adservices .ads p, .grid_wts .text p{
+    font-size: 14px;
+}
+
+.wts{
+    padding: 5%;
+}
+
+.grid_wts{
+    padding: 30px;
+}
+
+.grid_wts, .grid_wts > div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+    place-content: center;
+    place-items: start;
+    gap: 20px;
+    width: 100%;
+}
+
+.grid_wts img{
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+}
+
+.grid_wts .text p{
+    margin-bottom: 15px;
+}
+
+.grid_wts .text h4{
+    font-family: var(--primaryfont);
+    color: var(--primarycolor);
+}
+
+#faqs{
+    padding: 5%;
+}
+
+#faqs .grid_faqs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+    place-content: center;
+    place-items: start;
+    gap: 20px;
+    width: 100%;
+}
+
+#faqs .grid_faqs h2{
+    opacity: 1;
+    font-family: var(--secondaryfont);
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+#faqs .grid_faqs p{
+    font-family: var(--primaryfont);
+}
+
+#faqs .grid_faqs .text p{
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+#faqs .grid_faqs .text .arr{
+    color: var(--primarycolor);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#faqs .grid_faqs .text a{
+    background: var(--primarycolor);
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    font-family: var(--primaryfont);
+    font-size: 14px;
+}
+
+#faqs .qs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    place-content: center;
+    place-items: start;
+    gap: 20px;
+    width: 100%;
+}
+
+#faqs .qs .q{
+    height: 35px;
+    overflow: hidden;
+    background: rgb(240, 239, 239);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#faqs .qs .q h3{
+    color: var(--primarycolor);
+    font-family: var(--primaryfont);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#faqs .qs .q p{
+    padding: 20px;
+}
+
+#faqs .qs .q h3 span{
+    font-weight: bolder;
+}
+
+.founder{
+    padding: 5%;
+}
+
+.founder .grid_f{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+    place-content: center;
+    place-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.founder img{
+    border-radius: 10px;
+}
+
+.founder .text{
+    font-family: var(--primaryfont);
+    place-self: start;
+    justify-self: start;
+    width: 100%;
+}
+
+.founder p{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+#ref {
+    display: block;
+    margin: 0 auto;
+    color: var(--primarycolor);
+    font-family: var(--primaryfont);
+    box-shadow: 2px 2px 5px var(--primarycolor);
+}
+
+footer{
+    background: var(--primarycolor);
+    min-height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+    padding: 3% 0;
+    overflow: hidden;
+}
+
+footer div{
+    background: white;
+    border-radius: 10px;
+    height: 150px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--primaryfont);
+    position: relative;
+}
+
+footer div::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: var(--primarycolor)
+}
+
+footer div::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: var(--primarycolor)
+}
+
+footer h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primarycolor);
+    margin-bottom: 10px;
+}
+
+footer p{
+    font-weight: 500;
+}
+
+
+@media (max-width: 1130px){
+    #hero{
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-top: 20%;
+    }
+
+    #hero .form{
+        margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 760px) {
+    #hero .headlines h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 650px){
+    .wn{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    }
+
+    .wn .img{
+        width: 100%;
+        padding: 10px;
+    }
+    .wn .img::before{
+        left: 0;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #hero{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #hero .form form {
+        width: 100%;
+    }
+
+    #hero .headlines, #hero .form{
+        padding: 0;
+    }
+
+    .adservices .ads{
+        place-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    #hero{
+        padding-top: 25%;
+    }
+}
+
+@media (max-width: 360px) {
+    .cta.s{
+        display: block;
+        width: fit-content;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 330px) {
+    #hero{
+        padding-top: 35%;
+    }
+    #hero .headlines h1{
+        font-size: 30px;
+    }
+}
