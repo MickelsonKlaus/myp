@@ -56,7 +56,7 @@ forms.forEach(form => {
         let values = [...data.values()]
         
         let link = document.createElement("a")
-        link.href = `mailto:braimahaboy@gmail.com?subject=Request Job Estimate&body=name: ${values[0]}; address: ${values[1]}; phone-number: ${values[2]}; service: ${values[3]}`
+        link.href = `mailto:mryoungplumbingltd229@gmail.com?subject=Request Job Estimate&body=name: ${values[0]}; address: ${values[1]}; phone-number: ${values[2]}; service: ${values[3]}`
         
         link.click()
     
