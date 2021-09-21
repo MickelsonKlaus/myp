@@ -47,15 +47,14 @@ nav{
 }
 
 #logo{
-    background: white;
+   background: white;
+   padding: 5px;
+   border-radius: 10px;
 }
 
 #logo img{
-    width: 50px;
+    width: auto;
     height: 50px;
-    border-radius: 50%;
-    -object-fit: cover;
-    -object-position: center;
 }
 
 nav ul li{
