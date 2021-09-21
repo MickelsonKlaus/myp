@@ -339,7 +339,7 @@ nav ul li:hover{
     grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
 }
 
-.whys h3, .adservices .ads h3{
+.whys h3, .adservices .ads h3, .grid_f h3{
     font-family: var(--primaryfont);
     font-size: 18px;
     color: var(--primarycolor);
@@ -398,6 +398,8 @@ nav ul li:hover{
 .adservices .ads img{
     border-radius: 10px;
     margin-bottom: 10px;
+    height: 200px;
+    width: 100%;
 }
 
 .adservices .ads h3{
@@ -416,23 +418,28 @@ nav ul li:hover{
     padding: 30px;
 }
 
-.grid_wts, .grid_wts > div{
+.grid_wts{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
     place-content: center;
     place-items: start;
-    gap: 20px;
+    gap: 50px;
     width: 100%;
 }
 
-.grid_wts img{
-    border-radius: 10px;
-    height: 150px;
-    width: 150px;
+.grid_wts span{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.grid_wts .text p{
-    margin-bottom: 15px;
+.grid_wts img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 .grid_wts .text h4{
@@ -542,6 +549,7 @@ nav ul li:hover{
 
 .founder img{
     border-radius: 10px;
+    height: 350px;
 }
 
 .founder .text{
@@ -621,6 +629,7 @@ footer h3{
 
 footer p{
     font-weight: 500;
+    font-size: 14px;
 }
 
 
@@ -655,6 +664,10 @@ footer p{
     .wn .img::before{
         left: 0;
         margin-left: 10px;
+    }
+    #ref{
+        width: 90%;
+        max-width: 100%;
     }
 }
 
