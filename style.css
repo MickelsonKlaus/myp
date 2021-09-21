@@ -696,7 +696,7 @@ footer p{
 
 @media (max-width: 400px) {
     #hero{
-        padding-top: 30%;
+        padding-top: 35%;
     }
 }
 
@@ -710,7 +710,7 @@ footer p{
 
 @media (max-width: 330px) {
     #hero{
-        padding-top: 35%;
+        padding-top: 40%;
     }
     #hero .headlines h1{
         font-size: 30px;
